@@ -1,4 +1,4 @@
-const API_URL = "https://swt-movies.herokuapp.com/" || "http://127.0.0.1:3001/api"
+const API_URL = "https://swt-movies.herokuapp.com" || "http://127.0.0.1:3001/api"
 // const API_URL = "http://127.0.0.1:3001/api" || "https://swt-movies.herokuapp.com"
 
 const GenreService = {
