@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import * as actions from '../store/actions/index'
-import Link from 'react'
 import { connect } from 'react-redux';
 
 class Genres extends Component {
@@ -15,7 +14,7 @@ class Genres extends Component {
 
 	render() {
 		let renderedGenres = this.props.genres.map((genre, index) => {
-			let url = 'http://netflix.com/browse/genre/' + `${genre.code}`
+			let url = 'http://netflix.com/browse/genre/' + genre.code
 			return (
 				<div key={index}>
 					<a href={url}>{genre.title}</a>
