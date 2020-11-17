@@ -1,5 +1,4 @@
-const API_URL = "https://swt-movies.herokuapp.com/api" || "http://127.0.0.1:3001/api"
-// const API_URL = "http://127.0.0.1:3001/api" || "https://swt-movies.herokuapp.com"
+const API_URL = "http://127.0.0.1:3001" || "https://movies-api.smithwebtek.com"
 
 const GenreService = {
 	createGenre(genre) {
@@ -15,7 +14,8 @@ const GenreService = {
 			})
 	},
 	fetchGenres() {
-		return fetch(`${API_URL}/genres`)
+		// return fetch(`${API_URL}/genres`)
+		return fetch(`${API_URL}`)
 			.then(response => response.json())
 			.catch(error => {
 				console.log('[GenreService][fetchGenres] ERROR: ', error)

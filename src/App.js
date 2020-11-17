@@ -8,8 +8,8 @@ class App extends Component {
 		return (
 			<div className="App">
 				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
 					<h1 className="App-title">Welcome to Netflix Genres API</h1>
+					<p>Click any Genre below and you will be redirected to your Netflix account, showing movies in that Genre.</p>
 				</header>
 				<Genres />
 			</div>
