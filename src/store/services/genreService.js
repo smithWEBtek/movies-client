@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:3001" || "https://movies-api.smithwebtek.com"
+const API_URL = "https://movies-api.smithwebtek.com"
 
 const GenreService = {
 	createGenre(genre) {
