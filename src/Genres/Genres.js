@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import * as actions from '../store/actions/index'
 import { connect } from 'react-redux';
+import GenreCard from './GenreCard';
 
 class Genres extends Component {
 	state = {
@@ -17,15 +18,19 @@ class Genres extends Component {
 			let url = 'http://netflix.com/browse/genre/' + genre.code
 			return (
 				<div key={index}>
-					<a href={url}>{genre.title}</a>
-				</div >
+					<GenreCard
+						index={index}
+						url={url}
+						genre={genre}
+					/>
+				</div>
 			)
 		})
 
 		return (
-			<div>
+			<div className={"genres-index"}>
 				{renderedGenres}
-			</div >
+			</div>
 		)
 
 	}

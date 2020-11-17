@@ -4,25 +4,13 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
-
 import genreReducer from './store/reducers/genreReducer'
-// import studentReducer from './store/reducers/studentReducer'
-// import teacherReducer from './store/reducers/teacherReducer'
-// import resourceReducer from './store/reducers/resourceReducer'
-// import lessonReducer from './store/reducers/lessonReducer'
-// import lessonResourceReducer from './store/reducers/lessonResourceReducer'
-
 
 import App from './App'
 import './index.css';
 
 const rootReducer = combineReducers({
 	gen: genreReducer
-	// stu: studentReducer,
-	// tch: teacherReducer,
-	// les: lessonReducer,
-	// res: resourceReducer,
-	// lesres: lessonResourceReducer
 })
 
 const logger = store => {
@@ -48,4 +36,3 @@ const app = (
 )
 
 ReactDOM.render(app, document.getElementById('root'))
-// registerServiceWorker();
