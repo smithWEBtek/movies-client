@@ -1,4 +1,5 @@
 const API_URL = "https://movies-api.smithwebtek.com"
+// const API_URL = "http://localhost:3001"
 
 const GenreService = {
 	createGenre(genre) {
@@ -14,7 +15,7 @@ const GenreService = {
 			})
 	},
 	fetchGenres() {
-		// return fetch(`${API_URL}/genres`)
+		// return fetch(`${API_URL}/genres`) // the Rails API root routes to /genres#index
 		return fetch(`${API_URL}`)
 			.then(response => response.json())
 			.catch(error => {
